@@ -159,7 +159,7 @@ When featuring this repository on your CV or in technical interviews, frame this
 
 ## 📜 License
 
-This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)** - see the [LICENSE]() file for details.
+This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)** - see the [LICENSE](LICENSE) file for details.
 
 ### Copyleft Summary
 * **Open Source Requirement:** Any modification, distribution, or derivative work **must** be made publicly available under the AGPLv3 license.
