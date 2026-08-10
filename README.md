@@ -34,7 +34,7 @@ The System is divided into three functional domains[cite: 2]:
                  |  - Signal B (SYN-Flood Flag)          |
                  |  - Signal C (VIP Priority Select)     |
                  |  - Signal D (Valid CRC/Checksum)      |
-                 |  - SYS_CLK (System Clock Pulse)       |
+                 |                                       |
                  +-------------------+-------------------+
                                      |
                                      v
@@ -135,25 +135,11 @@ Follow this exact physical pin layout to bridge the ESP32 host, 74xx logic gates
 | **ESP32 GPIO 17** | 74HC08 Pin 2 (1B) | `Signal B` | SYN-Flood Flag Bus Line[cite: 2] |
 | **ESP32 GPIO 18** | 74HC153 Pin 14 (S1) | `Signal C` | VIP Class Select Line to MUX[cite: 2] |
 | **ESP32 GPIO 19** | 74HC08 Pin 4 (2A) | `Signal D` | Valid Checksum Flag Bus Line[cite: 2] |
-| **ESP32 GPIO 4** | 74HC74 Pin 3 (1CLK) | `SYS_CLK` | System Clock Pulse to D Flip-Flop Register[cite: 2] |
 | **74HC08 Output (Pin 6)** | 74HC74 Pin 2 (1D) | `F_pass_raw` | Combinational Pass Result to D Flip-Flop Input[cite: 2] |
 | **74HC74 Output Pin 5 (1Q)** | ESP32 GPIO 21 & 74HC153 S0 | `Q_pass (Latched)` | Latched Pass Flag fed back to ESP32 & MUX Select S0[cite: 2] |
 | **74HC153 Output Pin 7 (1Y)** | ESP32 GPIO 22 | `MUX_OUT` | Hardware Queue Route Feedback Signal[cite: 2] |
 | **ESP32 GPIO 21 (SDA)** | OLED SDA Pin | `I2C Data` | I2C Serial Data line for OLED Display[cite: 2] |
 | **ESP32 GPIO 22 (SCL)** | OLED SCL Pin | `I2C Clock` | I2C Serial Clock line for OLED Display[cite: 2] |
-
----
-
-## 💼 Industry Positioning & Resume (CV) Presentation
-
-When featuring this repository on your CV or in technical interviews, frame this project as a **Hardware-Accelerated Network Co-Processor**[cite: 1, 2]. Avoid simple project titles like 'ESP32 OLED Project'[cite: 1, 2]. Highlight core computer engineering terms: RTL Logic Synthesis, Pipeline Registers, Priority Scheduling, Dual-Core Multiprocessing, and Real-Time Hardware Telemetry[cite: 1, 2].
-
-### Resume Bullet Points
-
-* **Project Title Entry:** Hardware-Accelerated Network Packet Filtering Engine & Pipeline Priority Scheduler[cite: 1, 2]
-* Designed and synthesized modern combinational boolean logic gating (K-Maps) and discrete pipeline register stages (74HC74 D Flip-Flops) to inspect streaming packet headers at line-rate speed[cite: 1, 2].
-* Engineered a 4-to-1 Multiplexer (74HC153) priority scheduler to dynamically route traffic across high-priority VIP queues and standard queues while grounding malicious SYN-flood and corrupt frames[cite: 1, 2].
-* Implemented a FreeRTOS dual-core firmware driver on ESP32 to decouple non-blocking packet traffic generation from a 100Hz I2C OLED network telemetry dashboard displaying throughput metrics (PPS) and drop ratios[cite: 1, 2].
 
 ---
 
